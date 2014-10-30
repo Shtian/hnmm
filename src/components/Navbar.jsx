@@ -23,7 +23,7 @@ var NavbarHeader = React.createClass({
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="javascript:void(0)">Brand</a>
+        <a className="navbar-brand withripple" href="javascript:void(0)">HNMM<div className="ripple-wrapper"></div></a>
       </div>
     );
   }
@@ -32,10 +32,12 @@ var NavbarHeader = React.createClass({
 var NavbarContentWrapper = React.createClass({
   render() {
    return (
-       <ul className="nav navbar-nav">
-         <li className="active"><a href="javascript:void(0)">Active</a></li>
-         <li><a href="javascript:void(0)">Link</a></li>
-       </ul>
+     <div className="navbar-collapse collapse navbar-responsive-collapse">
+     <ul className="nav navbar-nav">
+       <li className="active"><a href="javascript:void(0)" className=" withripple">Active<div className="ripple-wrapper"></div></a></li>
+       <li><a href="javascript:void(0)" className=" withripple">Link<div className="ripple-wrapper"></div></a></li>
+     </ul>
+     </div>
    );
   }
 });
