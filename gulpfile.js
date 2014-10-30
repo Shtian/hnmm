@@ -59,7 +59,13 @@ gulp.task('vendor', function() {
     gulp.src('./node_modules/jquery/dist/**')
       .pipe(gulp.dest(DEST + '/vendor/jquery-' + pkgs.jquery)),
     gulp.src('./node_modules/bootstrap/dist/fonts/**')
-      .pipe(gulp.dest(DEST + '/fonts'))
+      .pipe(gulp.dest(DEST + '/fonts')),
+    gulp.src('./app/bower_components/bootstrap-material-design/fonts/**')
+      .pipe(gulp.dest(DEST + '/fonts')),
+    gulp.src('./app/bower_components/bootstrap-material-design/scripts/**')
+      .pipe(gulp.dest(DEST + '/scripts')),
+    gulp.src('./node_modules/jquery/dist/*')
+      .pipe(gulp.dest(DEST + '/scripts'))
   );
 });
 
